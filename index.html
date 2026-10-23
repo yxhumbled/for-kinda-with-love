@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f0">
+  <meta name="description" content="a little love note for kinda">
+  <title>for kinda with love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <audio id="love-song" src="song.mp3" preload="none" loop></audio>
+  <main class="page-shell">
+    <div class="doodle doodle-star" aria-hidden="true">✳</div>
+    <div class="doodle doodle-twinkle" aria-hidden="true">✦</div>
+    <div class="doodle doodle-heart" aria-hidden="true">♡</div>
+    <div class="doodle doodle-spark" aria-hidden="true">✧</div>
+
+    <section class="screen opening-screen is-active" id="opening" aria-labelledby="opening-title">
+      <p class="tiny-label">a little something for kinda</p>
+      <h1 id="opening-title">i made this<br>with all my heart</h1>
+      <button class="glow-heart-button" id="open-heart" aria-label="tap my heart to begin">
+        <span class="glow-heart" aria-hidden="true">♥</span>
+        <span class="glow-heart-hint">tap my heart</span>
+      </button>
+      <p class="handwritten opening-whisper">there's a lot of love in here</p>
+    </section>
+
+    <section class="screen game-screen" id="game" aria-labelledby="game-title" aria-hidden="true" inert>
+      <header class="game-header">
+        <p class="tiny-label">a little heart hunt</p>
+        <h1 id="game-title">catch a few for me?</h1>
+        <div class="progress-wrap" aria-label="hearts collected">
+          <span class="counter" id="counter" aria-live="polite">0 of 8 <span aria-hidden="true">♡</span></span>
+          <div class="progress-track" role="progressbar" id="progress" aria-label="hearts collected" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+            <span class="progress-fill" id="progress-fill"></span>
+          </div>
+        </div>
+      </header>
+      <div class="heart-garden" id="heart-garden" aria-label="tap the floating hearts" role="group"></div>
+      <p class="handwritten garden-hint">take your time sweet girl</p>
+      <div class="note-pop" id="note-pop" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="screen letter-screen" id="apology" aria-labelledby="apology-title" aria-hidden="true" inert>
+      <div class="confetti-layer" id="confetti" aria-hidden="true"></div>
+      <div class="scroll-toast" id="apology-toast" role="status">scroll as you read there's more to this note <span aria-hidden="true">♡</span></div>
+      <p class="tiny-label">first i need to say this</p>
+      <article class="letter-card apology-card">
+        <span class="tape" aria-hidden="true"></span>
+        <span class="card-doodle card-doodle-one" aria-hidden="true">✳</span>
+        <div class="letter-scroll" id="apology-scroll" tabindex="0" aria-label="my apology message">
+          <div class="photo-placeholder" role="img" aria-label="a spot for a photo of us"><span aria-hidden="true">♡</span><small>our favorite little moment</small></div>
+          <h1 id="apology-title">i'm really sorry</h1>
+          <div class="letter-copy" id="apology-copy"></div>
+          <p class="handwritten card-signoff">i care about your heart so much <span aria-hidden="true">♡</span></p>
+        </div>
+        <button class="next-button hidden-until-read" id="apology-next">click mee i promisee its cute <span aria-hidden="true">♡</span></button>
+      </article>
+      <p class="handwritten read-hint" id="apology-hint">read it whenever you're ready</p>
+    </section>
+
+    <section class="screen letter-screen" id="love-letter" aria-labelledby="love-title" aria-hidden="true" inert>
+      <div class="scroll-toast" id="love-toast" role="status">scroll as you read there's more to this note <span aria-hidden="true">♡</span></div>
+      <p class="tiny-label">and there's one more thing</p>
+      <article class="letter-card love-card">
+        <span class="tape tape-pink" aria-hidden="true"></span>
+        <span class="card-doodle card-doodle-one" aria-hidden="true">♡</span>
+        <div class="letter-scroll" id="love-scroll" tabindex="0" aria-label="my love message">
+          <h1 id="love-title">how much i love you</h1>
+          <div class="letter-copy" id="love-copy"></div>
+          <p class="handwritten card-signoff">you are my favorite person <span aria-hidden="true">♡</span></p>
+        </div>
+        <button class="final-heart-button" id="final-heart">
+          <span class="final-heart" aria-hidden="true">♥</span>
+          <span>click me when u finish reading this</span>
+        </button>
+      </article>
+    </section>
+
+    <section class="screen final-screen" id="final" aria-labelledby="final-title" aria-hidden="true" inert>
+      <div class="final-sparkles" aria-hidden="true">✧　♡　✳　♡　✧</div>
+      <div class="final-big-heart" aria-hidden="true">♥</div>
+      <h1 id="final-title" lang="ar" dir="rtl"></h1>
+      <p class="handwritten final-whisper">always and always</p>
+    </section>
+
+    <div class="music-control">
+      <button class="music-button" id="music-toggle" type="button" aria-pressed="false">music off <span aria-hidden="true">♫</span></button>
+      <span class="music-status" id="music-status" role="status" aria-live="polite"></span>
+    </div>
+  </main>
+</body>
+</html>
